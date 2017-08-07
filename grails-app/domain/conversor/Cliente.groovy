@@ -2,12 +2,19 @@ package conversor
 
 class Cliente {
 
-    def firstName
+    String firstName
 
-    def lastName
+    String lastName
 
-    def mail
+    String mail
+
+    Integer idade;
 
     static constraints = {
+        firstName nullable: false, maxSize: 100
+        idade min: 18
+        lastName notEqual: firstName
+
+
     }
 }
